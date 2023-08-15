@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="./assets/styles/index.css">
     <meta charset="UTF-8">
-    <meta name="description" content="Choropleth Map created with D3.js JavaScript library in HTML, CSS and JavaScript Vanilla">
+    <meta name="description"
+        content="Choropleth Map created with D3.js JavaScript library in HTML, CSS and JavaScript Vanilla">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"
+        integrity="sha512-4UKI/XKm3xrvJ6pZS5oTRvIQGIzZFoXR71rRBb1y2N+PbwAsKa5tPl2J6WvbEvwN3TxQCm8hMzsl/pO+82iRlg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Choropleth Map - D3.js</title>
 </head>
+
 <body>
     <main>
-        <h1 id="title"></h1>
-        <svg></svg>
+        <h1 id="title" style="font-size: 2.6rem;">United States Educational Attaintment</h1>
+        <h4 id="description" style="font-weight: normal;">
+            Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014)
+        </h4>
+        <section id="SectionMap">
+            <svg id="map"></svg>
+            <section id="SectionTooltipLegend">
+                <div id="tooltip"></div>
+                <svg id="legend">
+                    <g>
+                        <rect x="10" y="0" width="40" height="40" fill="#C77DFF" />
+                        <text x="60" y="25">Less than 15%</text>
+                    </g>
+                    <g>
+                        <rect x="10" y="40" width="40" height="40" fill="#9D4EDD" />
+                        <text x="60" y="65">15% to 25%</text>
+                    </g>
+                    <g>
+                        <rect x="10" y="80" width="40" height="40" fill="#7B2CBF" />
+                        <text x="60" y="105">25% to 50%</text>
+                    </g>
+                    <g>
+                        <rect x="10" y="120" width="40" height="40" fill="#5A189A" />
+                        <text x="60" y="145">50% to 75%</text>
+                    </g>
+                    <g>
+                        <rect x="10" y="160" width="40" height="40" fill="#3C096C" />
+                        <text x="60" y="185">75% to 100%</text>
+                    </g>
+                    <g>
+                        <rect x="10" y="200" width="40" height="40" fill="#330063" />
+                        <text x="60" y="225">Other</text>
+                    </g>
+                </svg>
+            </section>
+        </section>
     </main>
 </body>
 <script src="./assets/js/index.js"></script>
+
 </html>
